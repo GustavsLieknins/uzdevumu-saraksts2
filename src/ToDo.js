@@ -3,7 +3,6 @@ function ToDo(props) {
     //   const stundasJSX = props.stundas.map((stunda, i) => {
     //     return <Stunda key={i} nosaukums={stunda} />
     //   });
-    const [selected, setSelected] = useState('yes');
 
       return (
       <>
