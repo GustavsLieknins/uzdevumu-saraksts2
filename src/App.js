@@ -10,17 +10,19 @@ function App() {
   const url = 'https://jsonplaceholder.typicode.com/todos';
   const [todos, setTodos] = useState([]);
 
-  const fetchTodos = async () => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setTodos(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  
   useEffect(() => {
+    const fetchTodos = async () => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setTodos(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchTodos();
+    
   }, [])
   const fullLietinasParts = [
     {
